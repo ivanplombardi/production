@@ -11,3 +11,11 @@ h1, h2, h3 {
     font-weight: bold;
     color: #a15252; /* Adjust heading text color as needed */
 }
+
+/* Style for images in the .media-container */
+.media-container img {
+    max-width: 50%; /* Set the maximum width to 100% to make images responsive and fit their container */
+    height: 10px; /* Maintain the aspect ratio */
+    display: 10px; /* Remove any extra spacing around the images */
+    margin: 0 10px; /* Center-align images horizontally (optional) */
+}
