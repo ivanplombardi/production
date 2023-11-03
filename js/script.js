@@ -4,16 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Replace with your image URLs
     const photoUrls = [
-        "photos/image1.jpg",
-        "photos/image2.jpg",
-        "photos/image3.jpg",
+        "photos/00060005.jpg",
+        "photos/00060020.jpg",
+        "photos/000366250002.jpg",
+        "photos/000366250005.jpg"
         // Add more image URLs here
     ];
 
     photoUrls.forEach((url) => {
         const img = document.createElement("img");
         img.src = url;
-        img.alt = "Image";
+        img.alt = "NOLA Tuba";
         img.className = "media-item";
         
         // Set the width and height to make the image smaller
@@ -21,5 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
         img.style.height = "auto"; // Maintain the aspect ratio
         
         photosContainer.appendChild(img);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".enlargeable");
+        
+            images.forEach(function(image) {
+                image.addEventListener("click", function() {
+                    // Create a modal for the enlarged image
+                    const modal = document.createElement("div");
+                    modal.className = "modal";
+                    document.body.appendChild(modal);
+        
+                    // Create the enlarged image inside the modal
+                    const modalImage = document.createElement("img");
+                    modalImage.src = this.src;
+                    modal.appendChild(modalImage);
+        
+                    // Close the modal when clicking on it
+                    modal.addEventListener("click", function() {
+                        modal.remove();
+                    });
+                });
+            });
+        });
+        
     });
 });
