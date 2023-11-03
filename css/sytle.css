@@ -1,0 +1,13 @@
+/* Use Arial font for the entire website with a fallback to sans-serif */
+body {
+    font-family: 'Arial', sans-serif; /* Use Arial as the primary font with a fallback to sans-serif */
+    font-size: 16px; /* Adjust the default font size as needed */
+    line-height: 1.5; /* Adjust the line height for better readability */
+    color: #333; /* Adjust the text color as needed */
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif; /* Use Arial for headings with a fallback to sans-serif */
+    font-weight: bold;
+    color: #a15252; /* Adjust heading text color as needed */
+}
