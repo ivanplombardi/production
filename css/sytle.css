@@ -1,21 +1,90 @@
-/* Use Arial font for the entire website with a fallback to sans-serif */
-body {
-    font-family: 'Arial', sans-serif; /* Use Arial as the primary font with a fallback to sans-serif */
-    font-size: 16px; /* Adjust the default font size as needed */
-    line-height: 1.5; /* Adjust the line height for better readability */
-    color: #333; /* Adjust the text color as needed */
-}
-
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif; /* Use Arial for headings with a fallback to sans-serif */
-    font-weight: bold;
-    color: #a15252; /* Adjust heading text color as needed */
-}
-
-/* Style for images in the .media-container */
-.media-container img {
-    max-width: 50%; /* Set the maximum width to 100% to make images responsive and fit their container */
-    height: 10px; /* Maintain the aspect ratio */
-    display: 10px; /* Remove any extra spacing around the images */
-    margin: 0 10px; /* Center-align images horizontally (optional) */
-}
+:root {
+    --gap: 5px;
+    --duration-shrink: .5s;
+    --duration-expand: .25s;
+    --no-duration: 0s;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  p {
+    font-family: sans-serif;
+    margin: 1rem;
+  }
+  
+  ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--gap);
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+  }
+  
+  @media screen and (min-width: 640px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  li {
+    transition-property: transform, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--duration-expand);
+  }
+  
+  li.is-zoomed {
+    transition-duration: var(--duration-shrink);
+  }
+  
+  .is-zoomed li:not(.is-zoomed) {
+    opacity: 0.3;
+  }
+  
+  button {
+    all: initial;
+    display: block;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  li.is-zoomed button,
+  ul:not(.is-zoomed) button:focus {
+    outline: 2px solid red;
+    outline-offset: 1px;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .visually-hidden {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    white-space: nowrap;
+    position: absolute;
+  }
+  
+  @media (prefers-reduced-motion) {
+    li,
+    li.is-zoomed {
+      transition-duration: var(--no-duration);
+    }
+  }

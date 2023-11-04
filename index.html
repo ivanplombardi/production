@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
     <link rel="icon" type="image/png" href="photos/favicon.png">
-    <!-- <style>
+    <style>
         body {
-          background-image: url('photos/flowers.png');
-          background-size: cover; 
+          font-family: 'Helvetica'
         }
-      </style> -->
+      </style>
     <title>IVAN P!</title>
-    <script src="script.js"></script>
+    <style>
+        .expandable-image {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .expandable-image.left-transform {
+            transform-origin: left;
+        }
+
+        .expandable-image.center-transform {
+            transform-origin: center;
+        }
+
+        .expandable-image.right-transform {
+            transform-origin: right;
+        }
+
+        .expanded {
+            transform: scale(5);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,7 +48,7 @@
     
     <section id="bio">
         <p>
-            Hmm what to say. There has to be a balance btwn production and consumption. This is some of my production. 🎩
+           Hmm what to say. There has to be a balance <i>btwn</i> production and consumption. This is some of my production. 🎩
         </p>
     </section>
 
@@ -44,12 +64,12 @@
     <section id="photos">
         <h2>Photos</h2>
         <div class="media-container">
-            <img src="photos/08100006.JPG" style="width: 200px;">
-            <img src="photos/08100024.JPG" style="width: 200px;">
-            <img src="photos/nola tuba.png" alt="NOLA Tuba" style="width: 200px;">
-            <img src="photos/nola house.png" alt="NOLA House" style="width: 200px;">
-            <img src="photos/000366250002.jpg" alt="Wash Heights Chess" style="width: 200px;">
-            <img src="photos/000366250005.jpg" alt="Highbridge Water Tower" style="width: 200px;">
+            <img src="photos/08100006.JPG" class="expandable-image left-transform" style="width: 200px;">
+            <img src="photos/08100024.JPG" class="expandable-image left-transform" style="width: 200px;">
+            <img src="photos/nola tuba.png" class="expandable-image left-transform" alt="NOLA Tuba" style="width: 200px;">
+            <img src="photos/nola house.png" class="expandable-image center-transform" alt="NOLA House" style="width: 200px;">
+            <img src="photos/000366250002.jpg" class="expandable-image center-transform" alt="Wash Heights Chess" style="width: 200px;">
+            <img src="photos/000366250005.jpg" class="expandable-image right-transform" alt="Highbridge Water Tower" style="width: 200px;">
         </div>
     </section>
     
@@ -82,4 +102,21 @@
     </section>
 </body>
 <img src="photos/sableye.png" style="width: 100px;">
+<script>
+    const expandableImages = document.querySelectorAll('.expandable-image');
+
+    expandableImages.forEach(image => {
+        image.addEventListener('click', () => {
+            // Close all expanded images
+            expandableImages.forEach(otherImage => {
+                if (otherImage !== image) {
+                    otherImage.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle the expanded state of the clicked image
+            image.classList.toggle('expanded');
+        });
+    });
+</script>
 </html>
