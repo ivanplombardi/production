@@ -60,7 +60,16 @@
             box-sizing: border-box;
             /* Include padding and border in the element's total width and height */
         }
-
+        .media-item {
+    flex: 1;
+    /* Distribute available space equally among items */
+    max-width: 600px;
+    /* Set a maximum width for each item */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    border: 5px solid #ffffff;
+    /* Add a 5px solid border with a light gray color */
+}
         #sableye-container {
             display: flex;
             justify-content: center;
@@ -85,6 +94,10 @@
                 transform: none;
                 /* Remove the scale transform on mobile */
             }
+            .media-item {
+        border: 5px solid #ffffff;
+        /* Add a 5px solid border for mobile screens */
+    }
         }
     </style>
 </head>
