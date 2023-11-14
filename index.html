@@ -62,6 +62,15 @@
         #sableye-image {
             width: 50px;
         }
+        @media (max-width: 768px) {
+            .expandable-image {
+                cursor: auto; /* Disable pointer cursor */
+                transition: none; /* Remove transition effect */
+            }
+
+            .expanded {
+                transform: none; /* Remove the scale transform on mobile */
+            }
     </style>
 </head>
 <body>
