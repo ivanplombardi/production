@@ -28,15 +28,45 @@
         .expandable-image.right-transform {
             transform-origin: right;
         }
+        .expandable-image.left-top-transform {
+            transform-origin: left top;
+        }
+
+        .expandable-image.right-top-transform {
+            transform-origin: right top;
+        }
 
         .expanded {
-            transform: scale(5);
+            transform: scale(1.75);
+        }
+
+        .media-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Center items horizontally */
+            gap: 20px; /* Add some space between items */
+        }
+
+        .media-item {
+            flex: 1; /* Distribute available space equally among items */
+            max-width: 600px; /* Set a maximum width for each item */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        #sableye-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* Adjust the height as needed */
+        }
+
+        #sableye-image {
+            width: 50px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="media-container">
+        <!-- <div class="media-container">
         <img src="photos/Ivan P. Lombardi.png" style="width: 200px;">
         <img src="photos/LOGO.png" style="width: 200px;">
         <img src="photos/twigs.png" style:width="20" height="200">
@@ -60,48 +90,57 @@
             <li><a href="#politics">Religious Philosophy</a></li>
         </ul>
     </nav>
-    
+     -->
     <section id="photos">
-        <h2>Photos</h2>
+        <!-- <h2>Photos</h2> -->
         <div class="media-container">
-            <img src="photos/08100006.JPG" class="expandable-image left-transform" style="width: 200px;">
-            <img src="photos/08100024.JPG" class="expandable-image left-transform" style="width: 200px;">
-            <img src="photos/nola tuba.png" class="expandable-image left-transform" alt="NOLA Tuba" style="width: 200px;">
-            <img src="photos/nola house.png" class="expandable-image center-transform" alt="NOLA House" style="width: 200px;">
-            <img src="photos/000366250002.jpg" class="expandable-image center-transform" alt="Wash Heights Chess" style="width: 200px;">
-            <img src="photos/000366250005.jpg" class="expandable-image right-transform" alt="Highbridge Water Tower" style="width: 200px;">
+            <img src="photos/000047290007.JPG" class="expandable-image left-top-transform" style="width: 600px;">
+            <img src="photos/000047290035.JPG" class="expandable-image right-top-transform" style="width: 600px;">
+            <img src="photos/000047290037.JPG" class="expandable-image left-transform" style="width: 600px;">
+            <img src="photos/000043850002.JPG" class="expandable-image right-transform" style="width: 600px;">
+            <img src="photos/000043850014.JPG" class="expandable-image left-transform" style="width: 600px;">
+            <img src="photos/000043850015.JPG" class="expandable-image right-transform" style="width: 600px;">
+            <img src="photos/000047290001.JPG" style="width: 600px;">
+            <img src="photos/08100031.JPG" style="width: 600px;">
+            <img src="photos/08100006.JPG" class="expandable-image left-transform" style="width: 600px;">
+            <img src="photos/08100024.JPG" class="expandable-image right-transform" style="width: 600px;">
+            <img src="photos/nola tuba.png" class="expandable-image left-transform" alt="NOLA Tuba" style="width: 600px;">
+            <img src="photos/nola house.png" class="expandable-image right-transform" alt="NOLA House" style="width: 600px;">
+            <img src="photos/000366250002.jpg" class="expandable-image left-transform" alt="Wash Heights Chess" style="width: 600px;">
+            <img src="photos/000366250005.jpg" class="expandable-image right-transform" alt="Highbridge Water Tower" style="width: 600px;">
         </div>
     </section>
     
-    
-    <section id="videos">
-        <h2>Videos</h2>
+    <section id="videos" style="margin-top: 20px; margin-bottom: 20px;">
+        <!-- <h2>Videos</h2> -->
         <div class="media-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/R9pSEbS37jI" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zjwjr3DuHu8" frameborder="0" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/R9pSEbS37jI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/Zjwjr3DuHu8" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
         
     
     <section id="music">
-        <h2>Music</h2>
+        <!-- <h2>Music</h2> -->
         <div class="media-container">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1599503769&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fuammie" title="FUAM" target="_blank" style="color: #cccccc; text-decoration: none;">FUAM</a> · <a href="https://soundcloud.com/fuammie/i-door-2-i" title="DOOR 2" target="_blank" style="color: #cccccc; text-decoration: none;">DOOR 2</a></div>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1382375776&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fuammie" title="FUAM" target="_blank" style="color: #cccccc; text-decoration: none;">FUAM</a> · <a href="https://soundcloud.com/fuammie/presto" title="presto" target="_blank" style="color: #cccccc; text-decoration: none;">presto</a></div>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1315784068&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fuammie" title="FUAM" target="_blank" style="color: #cccccc; text-decoration: none;">FUAM</a> · <a href="https://soundcloud.com/fuammie/july31" title="modest august" target="_blank" style="color: #cccccc; text-decoration: none;">modest august</a></div>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1203097024&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fuammie" title="FUAM" target="_blank" style="color: #cccccc; text-decoration: none;">FUAM</a> · <a href="https://soundcloud.com/fuammie/failed-soulsiver-nuzlocke" title="failed soulsilver nuzlocke" target="_blank" style="color: #cccccc; text-decoration: none;">failed soulsilver nuzlocke</a></div>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1115366422&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fuammie" title="FUAM" target="_blank" style="color: #cccccc; text-decoration: none;">FUAM</a> · <a href="https://soundcloud.com/fuammie/sprats" title="sprats" target="_blank" style="color: #cccccc; text-decoration: none;">sprats</a></div>
+            <iframe width="600" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1599503769&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="600" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1382375776&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="600" height="200"scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1315784068&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="600" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1203097024&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         </div>
     </section>
 
-    <section id="politics">
+    <div id="sableye-container">
+        <img src="photos/sableye.png" id="sableye-image" alt="Sableye Image">
+    </div>
+
+    <!-- <section id="politics">
         <h2>Religious Philosophy</h2>
         <p>
             We shouldn't eat other mammals. I only eat birds and fish. It makes more sense. And we should celebrate the changing of the seasons a lot more than we do now. We don't do anything now, it's awful. I want big seasonal festivals and celebrations. We're gonna die one day and it's what we all share. The only thing we really share with each other is the fact that we're alive on this planet at this time. We're a big cohort of the humans that are alive right now. That's pretty intimate.
         </p>
-    </section>
+    </section> -->
 </body>
-<img src="photos/sableye.png" style="width: 100px;">
 <script>
     const expandableImages = document.querySelectorAll('.expandable-image');
 
