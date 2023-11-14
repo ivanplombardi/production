@@ -62,6 +62,16 @@
         #sableye-image {
             width: 50px;
         }
+        @media (max-width: 768px) {
+            .expandable-image {
+                cursor: auto; /* Disable pointer cursor */
+                transition: none; /* Remove transition effect */
+            }
+
+            .expanded {
+                transform: none; /* Remove the scale transform on mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -131,7 +141,9 @@
     </section>
 
     <div id="sableye-container">
-        <img src="photos/sableye.png" id="sableye-image" alt="Sableye Image">
+        <a href="https://www.youtube.com/watch?v=Tezr7pcUwXM" target="_blank">
+            <img src="photos/sableye.png" id="sableye-image" alt="Sableye Image">
+        </a>
     </div>
 
     <!-- <section id="politics">
