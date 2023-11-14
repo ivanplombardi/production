@@ -8,11 +8,37 @@
     <link rel="icon" type="image/png" href="photos/favicon.png">
     <style>
         body {
+            margin: 0;
             font-family: 'Helvetica'
         }
     </style>
     <title>IVAN P!</title>
     <style>
+           .navbar {
+      overflow: hidden;
+      background-color: #ffffff;
+      position: fixed;
+      top: 1;
+      width: 1;
+    }
+
+    .navbar a {
+      display: block;
+      color: #000000;
+      text-align: left;
+      padding: 10px 10px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ffffff;
+      color: rgb(218, 110, 9);
+    }
+
+    /* Style the individual sections */
+    #photos {background-color: #ffffff;}
+    #videos {background-color: #ffffff;}
+    #music {background-color: #ffffff;}
         .expandable-image {
             cursor: pointer;
             transition: transform .25s;
@@ -101,7 +127,11 @@
     }}
     </style>
 </head>
-
+  <div class="navbar">
+    <a href="#photos" sectionid="photos">Photos</a>
+    <a href="#videos" sectionid="videos">Videos</a>
+    <a href="#music" sectionid="music">Music</a>
+  </div>
 <body>
     <header>
         <!-- <div class="media-container">
@@ -129,7 +159,7 @@
         </ul>
     </nav>
      -->
-     <section id="videos" style="margin-top: 20px; margin-bottom: 20px;">
+     <section id="photos" style="margin-top: 20px; margin-bottom: 20px;">
             <!-- <h2>Photos</h2> -->
             <div class="media-container">
                 <img src="photos/000047290007.jpg" class="expandable-image left-top-transform" style="width: 600px;">
